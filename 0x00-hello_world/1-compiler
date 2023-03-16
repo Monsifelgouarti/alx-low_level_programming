@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -c -o $CFILE -dumpbase-ext '.o'
+gcc $CFILE -c -o $CFILE | tr '.c.*' '.o'
