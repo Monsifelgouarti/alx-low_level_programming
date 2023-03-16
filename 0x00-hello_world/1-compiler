@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -dumpdir pfx- -c $CFILE
+gcc $CFILE -c -o -dumpbase '.o'
