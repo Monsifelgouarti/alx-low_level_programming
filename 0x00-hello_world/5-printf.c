@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main(void)? (Disply message)
+ * main(void)? (- Disply message)
  *
  * Description: prints a line with printf()
  * Return: 0
