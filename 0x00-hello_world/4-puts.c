@@ -4,7 +4,7 @@
  *
  * Description: prints a line with puts()
  */
-int main(void)#function main
+int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	/**
