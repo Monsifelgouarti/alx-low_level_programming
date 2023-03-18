@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S $CFILE -dumpbase $CFILE
+gcc -save-temps -dumpbase -S $CFILE
