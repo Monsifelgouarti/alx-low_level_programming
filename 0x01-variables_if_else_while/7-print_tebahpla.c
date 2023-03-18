@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main(void)? (-puts alphabets)
- * Description: use function puts() to print alphabet
+ * Description: use function putchar() to print alphabetin reverse
  * Return: 0
  */
 int main(void)
