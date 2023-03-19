@@ -1,7 +1,8 @@
 #include<stdio.h>
 /**
  * main(void)? (-puts alphabets)
- * Description: use function puts() to print alphabet
+ * Description: prints all possible different combinations 
+ * of two digits.
  * Return: 0
  */
 int main(void)
@@ -15,7 +16,7 @@ int main(void)
 			{
 				putchar((i % 10) + '0');
 				putchar((j % 10) + '0');
-				if (j == 9)
+				if (j == 9 && i == 8)
 					break;
 				putchar(',');
 				putchar(' ');
