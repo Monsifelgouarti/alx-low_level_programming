@@ -20,7 +20,7 @@ int main(void)
 				putchar(' ');
 				putchar((k % 10) + '0');
 				putchar((l % 10) + '0');
-				if ()
+				if ((i + '0' + j + '0') == (k + '0' + l + '0'))
 				break;
 				putchar(',');
 				putchar(' ');
