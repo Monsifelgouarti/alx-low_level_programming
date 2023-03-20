@@ -12,15 +12,14 @@ int main(void)
 	for (i = 0; i <= 9; i++)
 		for (j = 0; j <= 9; j++)
 			for (k = 0; k <= 9; k++)
-			for (l = 0; l <= 9; l++)
-			if ((i + '0' + j + '0') != (k + '0' + l + '0') && i >= l)
+			for (l = j + 1; l <= 9; l++)
 			{
 				putchar((i % 10) + '0');
 				putchar((j % 10) + '0');
 				putchar(' ');
 				putchar((k % 10) + '0');
 				putchar((l % 10) + '0');
-				if ((i + '0' + j + '0') == (k + '0' + l + '0'))
+				if (j > 8)
 				break;
 				putchar(',');
 				putchar(' ');
