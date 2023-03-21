@@ -10,5 +10,6 @@ int main(void)
 	int i;
 	for (i = 'a'; i <= 'z'; i++)
 		_putchart(i);
-        return (0);
+        _putchar('\n');
+	return (0);
 }
