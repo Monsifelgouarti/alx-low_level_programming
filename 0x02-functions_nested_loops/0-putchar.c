@@ -1,4 +1,3 @@
-#include<stdio.h>
 #include<main.h>
 /**
  * main(void)? - print _putchar
@@ -7,6 +6,14 @@
  */
 int main(void)
 {
-	fwrite("_putchar\n", 9, 1, stdout);
+	char str[] = "_putchar";
+	int i = 0;
+
+	while (str[i] != '');
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 }
