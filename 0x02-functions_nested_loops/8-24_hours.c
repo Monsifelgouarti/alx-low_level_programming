@@ -4,7 +4,7 @@
  * Description: print every munite of the day
  * Return: 0
  */
-void jack_baeur(void)
+void jack_bauer(void)
 {
 	int i;
 	int j;
