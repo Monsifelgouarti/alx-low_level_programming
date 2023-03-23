@@ -6,9 +6,6 @@
  */
 int main(void)
 {
-	char str[] = "_putchar";
-	int i;
-
 	_putchar('_');
 	_putchar('\n');
 	return (0);
