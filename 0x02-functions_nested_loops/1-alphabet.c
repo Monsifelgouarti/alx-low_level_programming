@@ -13,11 +13,6 @@ void print_alphabet(void)
 	_putchart(i);
 	_putchar('\n');
 }
-/**
- * main(void)? - print _putchar
- * Description: prints _putchar, followed by a new line.
- * Return: 0
- */
 int main(void)
 {
 	print_alphabet();
