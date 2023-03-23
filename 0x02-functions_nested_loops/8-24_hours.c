@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * jack_baeur(void)? (- print minutes)
+ * jack_bauer(void)? (- print minutes)
  * Description: print every munite of the day
  * Return: 0
  */
@@ -17,7 +17,7 @@ void jack_bauer(void)
 			_putchar((i % 10) + '0');
 			_putchar(':');
 			_putchar((j / 10) + '0');
-			_putchar((i % 10) + '0');
+			_putchar((j % 10) + '0');
 			_putchar('\n');
 		}
 	}
