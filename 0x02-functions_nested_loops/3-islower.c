@@ -3,8 +3,7 @@
  * _islower(int c)? (- check for lowercase)
  * Description: checks for lowercase character,
  * @c: a character to test
- * Return: 1 if c is lowercase
- * Return: 0 otherwise
+ * Return: 1 if c is lowercase, 0 otherwise
  */
 void _islower(int c)
 {
