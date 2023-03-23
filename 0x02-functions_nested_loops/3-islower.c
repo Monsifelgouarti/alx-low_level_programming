@@ -5,7 +5,7 @@
  * @c: a character to test
  * Return: 1 if c is lowercase, 0 otherwise
  */
-void _islower(int c)
+int _islower(int c)
 {
 	int i, j = 0;
 
