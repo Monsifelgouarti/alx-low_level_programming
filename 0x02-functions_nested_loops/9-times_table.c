@@ -17,11 +17,15 @@ void times_table(void)
 			{
 				_putchar((res / 10) + '0');
 				_putchar((res % 10) + '0');
-				if (j < 9)
-				{
+			}
+			else
+			{
+				_putchar((res % 10) + '0');
+			}
+			if (j < 9)
+                        {
 				_putchar(',');
 				_putchar(' ');
-				}
 			}
 		}
 		_putchar('\n');
