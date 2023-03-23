@@ -1,16 +1,5 @@
 #include "main.h"
 /**
- * main(void)? - print alphabet
- * Description: prints the alphabet, in lowercase,
- *  followed by a new line, with function print_alphabet
- *  Return: 0
- */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-/**
  * print_alphabet(void)? - print alphabet
  * Description: prints the alphabet, in lowercase,
  * followed by a new line.
