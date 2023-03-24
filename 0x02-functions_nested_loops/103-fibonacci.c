@@ -11,8 +11,8 @@ int main(void)
 	while (f < 4000000)
 	{
 		f = fn_2 + fn_1;
-		if ((f % 2) != 0)
-			sum += f;
+		if ((f % 2) == 1)
+			sum = sum + f;
 		fn_2 = fn_1;
 		fn_1 = f;
 	}
