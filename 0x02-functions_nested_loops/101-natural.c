@@ -5,9 +5,9 @@
  * of 3 or 5 below 1024
  * Return: 0
  */
-void main(void)
+int main(void)
 {
-	int i, j, sum = 0;
+	int i, sum = 0;
 
 	for (i = 0; i < 1024; i++)
 	{
