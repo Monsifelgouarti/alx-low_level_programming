@@ -16,6 +16,7 @@ int main(void)
 		fn_2 = fn_1;
 		fn_1 = f;
 	}
+	printf("%ld", sum);
 	printf("\n");
 	return (0);
 }
