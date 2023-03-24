@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-	int i;
 	long int fn_1 = 1, fn_2 = 0, f = 0, sum = 0;
 
 	while (f < 4000000)
