@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * void main(void);? (- print somme)
- * Description: print the sum of all the multiples 
+ * main(void);? (- print somme)
+ * Description: print the sum of all the multiples
  * of 3 or 5 below 1024
  * Return: 0
  */
