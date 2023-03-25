@@ -12,21 +12,21 @@ void main(void)
 	{
 		if (i % 3 && i % 5)
 		{
-			printf("FizzBuzz "):
+			printf("FizzBuzz ");
 			continue;
 		}
 		if ((i % 3) == 0)
 		{
-			printf("Fizz "):
-                        continue;
+			printf("Fizz ");
+			continue;
 		}
 		if ((i % 5) == 0)
 		{
-			printf("Buzz "):
-                        continue;
+			printf("Buzz ");
+			continue;
 		}
 		else
-			printf("%d ", i):
+			printf("%d ", i);
 	}
 	_putchar('\n');
 }
