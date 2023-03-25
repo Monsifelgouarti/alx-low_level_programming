@@ -2,6 +2,7 @@
 /**
  * print_line(int)? (- print a line)
  * Description:  prints a line of '_'
+ * @n: the lenght of the line.
  */
 void print_line(int n)
 {
