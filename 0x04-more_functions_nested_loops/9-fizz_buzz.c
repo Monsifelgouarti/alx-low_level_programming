@@ -4,7 +4,7 @@
  * Description:  prints fizzbuzz instead of multiples of 3 and 5
  * return: 0
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -28,5 +28,6 @@ void main(void)
 		else
 			printf("%d ", i);
 	}
-	_putchar('\n');
+	printf('\n');
+	return (0);
 }
