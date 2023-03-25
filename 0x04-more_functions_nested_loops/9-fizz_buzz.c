@@ -2,7 +2,7 @@
 /**
  * main(void)? (- print a fizzbuzz)
  * Description:  prints fizzbuzz instead of multiples of 3 and 5
- * return: 0
+ * Return: 0
  */
 int main(void)
 {
@@ -12,21 +12,23 @@ int main(void)
 	{
 		if ((i % 3) == 0 && (i % 5) == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 			continue;
 		}
 		if ((i % 3) == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 			continue;
 		}
 		if ((i % 5) == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 			continue;
 		}
 		else
-			printf("%d ", i);
+			printf("%d", i);
+		if (i < 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
