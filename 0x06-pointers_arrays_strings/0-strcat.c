@@ -24,7 +24,7 @@ char *_strcat(char *dest, char *src)
 		*(dest + dest_len + j) = *(src + j);
 	}
 
-	*(dest + dest_len + src_len - 1) = '0';
+	*(dest + dest_len + src_len - 1) = '\0';
 
 	return (dest);
 }
