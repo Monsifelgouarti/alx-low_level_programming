@@ -10,7 +10,6 @@ char *rot13(char *str)
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	if (str[i] != ' ')
 	while (*(str + i))
 	{
 		for (j = 0; j <= 52; j++)
