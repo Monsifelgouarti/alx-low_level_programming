@@ -13,8 +13,8 @@ char *rot13(char *str)
 	while (*(str + i))
 	{
 		for (j = 0; j <= 52; j++)
-			if (*(str + i) == leet[j])
-				*(str + i) = num[j];
+			if (*(str + i) == in[j])
+				*(str + i) = out[j];
 		i++;
 	}
 
