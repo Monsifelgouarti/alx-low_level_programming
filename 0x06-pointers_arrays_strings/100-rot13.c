@@ -4,7 +4,7 @@
  * @str: String
  * Return: string modified.
  */
-char *rot(char *str)
+char *rot13(char *str)
 {
 	int i = 0, j;
 	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
