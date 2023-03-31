@@ -11,7 +11,7 @@ char *leet(char *str)
 
 	while (*(str + i))
 	{
-		for (j = 0; j < 9; j++)
+		for (j = 0; j <= 9; j++)
 			if (*(str + i) == leet[j])
 				*(str + i) = num[j];
 		i++;
