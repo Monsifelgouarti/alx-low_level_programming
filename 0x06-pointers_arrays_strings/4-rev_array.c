@@ -9,8 +9,7 @@ void reverse_array(int *a, int n)
 {
 	int i, rev[n], k = 0;
 
-	*rev = *a;
-	for (i = n - 1; i >= 0; i--)
+	for (i = n - 1; i >= n / 2; i--)
 	{
 		*(a + k) = rev[i];
 		k++;
