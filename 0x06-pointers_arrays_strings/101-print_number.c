@@ -6,16 +6,29 @@
  */
 int print_number(int n)
 {
-	int i = 0, res = 0;
-
-	res 
-	while (*(str + i))
+	int res;
+	
+	if (n >= 0)
 	{
-		for (j = 0; j <= 9; j++)
-			if (*(str + i) == leet[j])
-				*(str + i) = num[j];
-		i++;
+		if (n >= 10)
+		{
+			res = n / 10;
+			print_number(res);
+			_putchar(n % 10 + '0');
+		}
+		else
+			_putchar(n % 10 + '0');
 	}
+	else
+	{
+		if (n > -10)
+			_putchar(n % 10);
+		else
+		{
+			res = n / 10;
+			print_number(res);
+			_putchar((n % 10) * -1 + '0');
+		}
 
-	return (str);
+	}
 }
