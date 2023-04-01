@@ -12,7 +12,7 @@ char *rot13(char *str)
 
 	while (*(str + i))
 	{
-		for (j = 0; j <= 52; j++)
+		for (j = 0; j <= 53; j++)
 			if (*(str + i) == in[j])
 				*(str + i) = out[j];
 		i++;
