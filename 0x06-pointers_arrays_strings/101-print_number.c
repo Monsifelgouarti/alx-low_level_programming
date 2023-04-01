@@ -14,20 +14,20 @@ void print_number(int n)
 		{
 			res = n / 10;
 			print_number(res);
-			_putchar((n % 10) + '0');
+			putchar((n % 10) + '0');
 		}
 		else
-			_putchar((n % 10) + '0');
+			putchar((n % 10) + '0');
 	}
 	else
 	{
 		if (n > -10)
-			_putchar((n % 10) + '0');
+			putchar((n % 10) + '0');
 		else
 		{
 			res = n / 10;
 			print_number(res);
-			_putchar(((n % 10) * -1) + '0');
+			putchar(((n % 10) * -1) + '0');
 		}
 
 	}
