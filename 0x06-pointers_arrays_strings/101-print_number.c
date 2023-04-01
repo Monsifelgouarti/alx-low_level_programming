@@ -22,7 +22,10 @@ void print_number(int n)
 	else
 	{
 		if (n > -10)
+		{
+			putchar('-');
 			putchar((n % 10) + '0');
+		}
 		else
 		{
 			res = n / 10;
