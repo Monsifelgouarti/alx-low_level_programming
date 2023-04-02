@@ -13,10 +13,10 @@ void puts_half(char *s)
 		i++;
 	}
 
-	if (i % 2 == 1)
+	if (i % 2 == 0)
 		i--;
 	n = i / 2;
-	for (j = n - 1; j < i; j++)
+	for (j = n ; j < i; j++)
 		putchar(*(s + j));
 	putchar('\n');
 }
