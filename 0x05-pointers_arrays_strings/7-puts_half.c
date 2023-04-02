@@ -14,7 +14,7 @@ void puts_half(char *s)
 	}
 
 	if (i % 2 != 0)
-		i--;
+		i++;
 	n = i / 2;
 	while (*(s + n) != '\0')
 	{
