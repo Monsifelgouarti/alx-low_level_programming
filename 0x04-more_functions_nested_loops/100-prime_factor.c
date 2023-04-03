@@ -2,10 +2,11 @@
 /**
  * main(void)? (- print the prime factor)
  * Description:  prints the largest prime factor
+ * Return: 0
  */
 int main(void)
 {
-	long int num = 612852475143;
+	long long int num = 612852475143;
 	int large = 2;
 
 	while (num > 1)
