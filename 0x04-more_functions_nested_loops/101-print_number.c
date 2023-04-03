@@ -29,6 +29,7 @@ void print_number(int n)
 		}
 		else
 		{
+			n = -n;
 			_putchar('-');
 			_putchar(n + '0');
 		}
