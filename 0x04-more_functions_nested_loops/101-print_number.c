@@ -21,7 +21,8 @@ void print_number(int n)
 	}
 	else
 	{
-		if (res <= 10)
+		res = n / 10;
+		if ( n <= -10)
 		{
 			print_number(res);
 			_putchar((n % 10) + '0');

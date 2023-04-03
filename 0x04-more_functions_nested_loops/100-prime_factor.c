@@ -6,18 +6,14 @@
 void main(void)
 {
 	long int num = 612852475143;
-	int i, divador, largest_p_f;
+	int large = 2;
 
-	divador = 1;
-	while ()
+	while (num > 1)
 	{
-		for (j = (n - i); j >= 1; j--)
-			_putchar(' ');
-		for (k = 1; k <= i; k++)
-			_putchar('#');
-		_putchar('\n');
-		i++;
+		if (num % large == 0)
+			num = num / large;
+		else
+			large++;
 	}
-	else
-		_putchar('\n');
+	return (0);
 }
