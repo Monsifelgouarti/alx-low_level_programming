@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long long int num = 612852475143;
+	long int num = 612852475143;
 	int large = 2;
 
 	while (num > 1)
@@ -16,5 +16,6 @@ int main(void)
 		else
 			large++;
 	}
+	printf("%d\n", large);
 	return (0);
 }
