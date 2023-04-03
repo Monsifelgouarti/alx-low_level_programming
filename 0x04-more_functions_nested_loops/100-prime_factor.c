@@ -15,5 +15,4 @@ void main(void)
 		else
 			large++;
 	}
-	return (0);
 }
