@@ -7,22 +7,26 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int *len = 0;
-	int i = 0, j;
+	unsigned int len = 0;
+	int i = 0, j, found;
 
-	while (accept[i])
+	while (s[i])
 	{
 		j = 0;
-		while (s[j])
+		found = 0
+		while (accept[j])
 		{
-			if (s[j] == accept[i])
+			if (s[i] == accept[j])
 			{
 				len++;
+				found = 1;
 				break;
 			}
 			j++;
 		}
+		if (found == 0)
+			break;
 		i++;
 	}
-	return (++len);
+	return (len);
 }
