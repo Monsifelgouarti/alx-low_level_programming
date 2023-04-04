@@ -21,7 +21,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (needle[j] == haystack[i + j])
 			{
-				first = haystack[i];
+				first = &haystack[i];
 				found = 1;
 				j++;
 			}
@@ -31,10 +31,9 @@ char *_strstr(char *haystack, char *needle)
 				break;
 			}
 		}
-		
+		}
 		if (found == 1)
 			break;
-		}
 		i++;
 	}
 	return (first);
