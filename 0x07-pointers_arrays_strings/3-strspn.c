@@ -5,9 +5,9 @@
  * @accept: substring
  * * Return: number of bytes
  */
-unsigned int *_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int len = 0;
+	unsigned int *len = 0;
 	int i = 0, j;
 
 	while (accept[i])
