@@ -10,16 +10,19 @@ unsigned int *_strspn(char *s, char *accept)
 	unsigned int len = 0;
 	int i = 0, j;
 
-	while (s[i])
+	while (accept[i])
 	{
 		j = 0;
-		while (accept[j])
+		while (s[j])
 		{
-			if (s[i] == accept[j])
+			if (s[j] == accept[i])
+			{
 				len++;
+				break;
+			}
 			j++;
 		}
 		i++;
 	}
-	return (len);
+	return (++len);
 }
