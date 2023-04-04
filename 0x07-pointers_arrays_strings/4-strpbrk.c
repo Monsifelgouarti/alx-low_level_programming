@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _strpbrk - Locate the first occurence in s 
+ * _strpbrk - Locate the first occurence in s
  * of any of bytes of accept
  * @s: array of char
  * @accept: substring
