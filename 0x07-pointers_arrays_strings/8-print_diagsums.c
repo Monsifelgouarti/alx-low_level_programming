@@ -15,16 +15,16 @@ void print_diagsums(int *a, int size)
 		diagsums += a[i];
 		a += size;
 	}
-	
-	printf("%d, ",diagsums);
+
+	printf("%d, ", diagsums);
 
 	diagsums = 0;
-	
+
 	for (i = 0; i < size; i++)
 	{
 		p += size - 1;
-		diagsums += a[0];
+		diagsums += p[0];
 	}
 
-	printf("%d\n",diagsums);
+	printf("%d\n", diagsums);
 }
