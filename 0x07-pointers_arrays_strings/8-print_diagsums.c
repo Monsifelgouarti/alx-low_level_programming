@@ -7,24 +7,24 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, j, diagsums = 0;
+	int i, diagsums = 0, *p;
 
+	p = a;
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size; j++)
-			if (i == j)
-				diagsums += a[j];
-		printf("%d, ", diagsums);
-		a++;
+		diagsums += a[j];
+		a += size;
 	}
+	
+	printf("%d, ",diagsums);
 
 	diagsums = 0;
-	for (i = size - 1; i >= 0; i--)
+	
+	for (i = 0; i < size; i++)
 	{
-		for (j = size - 1; j >= 0; j--)
-			if (i == j)
-				diagsums += a[j];
-		printf("%d\n", diagsums);
-		a--;
+		p += size - 1;
+		diagsums += a[j];
 	}
+
+	printf("%d\n",diagsums);
 }
