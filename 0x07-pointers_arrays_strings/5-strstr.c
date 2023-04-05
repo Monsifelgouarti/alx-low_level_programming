@@ -11,11 +11,13 @@ char *_strstr(char *haystack, char *needle)
 	char *first = NULL;
 	int i = 0, j, found;
 
+	if (*needle == 0)
+		return (haystack);
 	while (haystack[i])
 	{
 		j = 0;
 		found = 0;
-		if (haystack[i] == needle[j] && needle[j] != '\0')
+		if (haystack[i] == needle[j] && needle[j])
 		{
 		while (needle[j])
 		{
