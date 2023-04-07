@@ -13,14 +13,10 @@ int _sqrt_recursion(int n)
 	if (n == 0)
 		return (0);
 
-	while (i <= n)
+	if (n % i == 0)
 	{
-		if (n % i == 0)
-		{
-			n = n / i;
-			return (n % i == 0 ? _sqrt_recursion(n) : (i + _sqrt_recursion(n)));
-		}
-		i++;
+		n = n / i;
+		return (n % i == 0 ? _sqrt_recursion(n) : (i + _sqrt_recursion(n)));
 	}
 	return (0);
 }
