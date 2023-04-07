@@ -12,16 +12,15 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0)
 		return (0);
-	else
+
+	while (i <= n)
 	{
-		while (i <= n)
+		if (n % i == 0)
 		{
-			if (n % i == 0)
-			{
-				n = n / i;
-				return (n % i == 0 ? _sqrt_recursion(n) : (i + _sqrt_recursion(n)));
-			}
-			i++;
+			n = n / i;
+			return (n % i == 0 ? _sqrt_recursion(n) : (i + _sqrt_recursion(n)));
 		}
+		i++;
 	}
 }
+
