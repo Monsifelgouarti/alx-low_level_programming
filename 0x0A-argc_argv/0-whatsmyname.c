@@ -1,3 +1,4 @@
+#include < stdlib.h>
 #include <stdio.h>
 /**
  * main - it prints it's name
