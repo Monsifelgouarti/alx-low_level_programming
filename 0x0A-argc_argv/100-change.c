@@ -16,10 +16,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	else if (argc == 2 && atoi(argv[1]))
+	if (argc == 2)
 	{
+		if (!atoi(argv[1]))
+		{
+			printf("Error\n");
+			return (1);
+		}
 		change = atoi(argv[1]);
-		if (change < 0)
+		if (change <= 0)
 			printf("0\n");
 		else
 		{
