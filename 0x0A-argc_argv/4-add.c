@@ -4,7 +4,7 @@
  * main - adds positive number
  * @argc: number of arguments passed to the program
  * @argv: array of arguments
- * Return: 0.
+ * Return: 0 or 1 if it's an Error.
  */
 int main(int argc, char *argv[])
 {
