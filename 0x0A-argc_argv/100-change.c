@@ -18,22 +18,22 @@ int main(int argc, char *argv[])
 	}
 	else if (argc == 2 && atoi(argv[1]))
 	{
-		change = argv[1];
-		count += change / 25;
-		change = change % 25;
-		count += change / 10;
-		change = change % 10;
-		count += change / 5;
-		change = change % 5;
-		count += change / 2;
-		change = change % 2;
-		count += change / 1;
-		printf("%d\n", count);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
+		change = atoi(argv[1]);
+		if (change < 0)
+			printf("0\n");
+		else
+		{
+			count += change / 25;
+			change = change % 25;
+			count += change / 10;
+			change = change % 10;
+			count += change / 5;
+			change = change % 5;
+			count += change / 2;
+			change = change % 2;
+			count += change / 1;
+			printf("%d\n", count);
+		}
 	}
 	return (0);
 }
