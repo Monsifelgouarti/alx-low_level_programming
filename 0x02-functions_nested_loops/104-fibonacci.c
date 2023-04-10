@@ -7,14 +7,14 @@
 int main(void)
 {
 	int i;
-	long long int fn_1 = 1, fn_2 = 0, f = 0;
+	unsigned long int fn_1 = 1, fn_2 = 0, f = 0;
 
-	printf("%lld, ", fn_1);
-	printf("%lld, ", fn_2);
+	printf("%lu, ", fn_1);
+	printf("%lu, ", fn_2);
 	for (i = 2; i <= 98; i++)
 	{
 		f = fn_2 + fn_1;
-		printf("%lld, ", f);
+		printf("%lu, ", f);
 		fn_2 = fn_1;
 		fn_1 = f;
 		if(i < 98)
