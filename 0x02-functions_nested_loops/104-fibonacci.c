@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i;
-	long int fn_1 = 1, fn_2 = 0, f = 0;
+	unsigned long int fn_1 = 1, fn_2 = 0, f = 0;
 
 	printf("%lu, ", fn_1);
 	printf("%lu, ", fn_2);
