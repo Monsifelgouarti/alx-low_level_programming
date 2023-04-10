@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i;
-	unsigned long int fn_1 = 1, fn_2 = 0, f = 0;
+	long int fn_1 = 1, fn_2 = 0, f = 0;
 
 	printf("%lu, ", fn_1);
 	printf("%lu, ", fn_2);
@@ -17,7 +17,7 @@ int main(void)
 		printf("%lu, ", f);
 		fn_2 = fn_1;
 		fn_1 = f;
-		if(i < 98)
+		if (i < 98)
 		printf(", ");
 	}
 	printf("\n");
