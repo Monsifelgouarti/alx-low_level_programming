@@ -6,7 +6,7 @@
  */
 int _atoi(char *s)
 {
-	int i = 0, signe = 0,count = 0, num = 0, pow, j;
+	int i = 0, signe = 0, count = 0, num = 0, pow, j;
 	char *c = NULL;
 
 	while (s[i])
@@ -28,7 +28,7 @@ int _atoi(char *s)
 	}
 	if (count != 0)
 	{
-		for (i = count; i > 0; i++)
+		for (i = count; i > 0; i--)
 		{
 			pow = *c - 48;
 			for (j = 1; j < i; j++)
