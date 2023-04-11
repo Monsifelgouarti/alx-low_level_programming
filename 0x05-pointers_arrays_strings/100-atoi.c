@@ -12,10 +12,12 @@ int _atoi(char *s)
 
 	while (s[i])
 	{
-		if ((s[i] == '-') && (s[i + 1] >= 48 && s[i + 1] <= 57))
+		if (s[i] == '-')
 		{
-			signe = 1;
-			c = &s[i + 1];
+			if (signe == 1)
+				signe = 0;
+			else
+				signe = 1;
 		}
 		if ((s[i] >= 48 && s[i] <= 57))
 		{
