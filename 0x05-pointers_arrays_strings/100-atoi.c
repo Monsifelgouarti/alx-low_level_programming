@@ -37,8 +37,9 @@ int _atoi(char *s)
 			c++;
 		}
 		if (signe == 1)
-			num = -num;
-		return (num);
+			return (-num);
+		else
+			return (num);
 	}
 	else
 		return (0);
