@@ -18,9 +18,15 @@ char *str_concat(char *s1, char *s2)
 		return (ptr);
 	}
 	if (s1 == NULL && s2 != NULL)
-		return (s2);
+	{
+		ptr = s2;
+		return (ptr);
+	}
 	if (s2 == NULL && s1 != NULL)
-		return (s1);
+	{
+		ptr = s1;
+		return (prt);
+	}
 	while (s1[len])
 		len++;
 
