@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *create_array - create an array of char and initializes it with a char
- * @size: size of the array
- * @c: a char to initialize the array
- * * Return: NULL if size is 0 or if it fails.
+ * **strtow - split string to words
+ * @str: a string to split
+ * * Return: words or NULL if str is NULL 0 or if it fails.
  */
 char **strtow(char *str)
 {
@@ -14,12 +13,12 @@ char **strtow(char *str)
 	if (str == NULL || str)
 		return (NULL);
 
-	while(str[i])
+	while (str[i])
 	{
 		if (str[i] == ' ' && str[i + 1] != ' ')
 			nbr_word++;
 	}
 	ptr = malloc(sizeof(char *) * nbr_word);
-	
+
 	return (ptr);
 }
