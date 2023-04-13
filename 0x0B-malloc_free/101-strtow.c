@@ -11,7 +11,7 @@ char **strtow(char *str)
 	char **ptr;
 	int nbr_word = 0, i = 0;
 
-	if (str == NULL || str == "")
+	if (str == NULL || str)
 		return (NULL);
 
 	while(str[i])
