@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - it prints the number of arguments 
+ * main - it prints the number of arguments
  * @argc: number of arguments passed to the program
  * Return: 0.
  */
