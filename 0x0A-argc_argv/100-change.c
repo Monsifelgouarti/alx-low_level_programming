@@ -18,14 +18,12 @@ int main(int argc, char *argv[])
 	}
 	if (argc == 2)
 	{
-		if (!atoi(argv[1]))
-		{
-			printf("Error\n");
-			return (1);
-		}
 		change = atoi(argv[1]);
 		if (change <= 0)
+		{
 			printf("0\n");
+			return (0);
+		}
 		else
 		{
 			count += change / 25;
