@@ -19,11 +19,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		while (s2[lens2])
 			lens2++;
 	if (lens2 <= n)
-		size = lens1 + lens2 + 1;
+		size = lens1 + lens2;
 	else
-		size = lens1 + n + 1;
-
-	ptr = malloc(sizeof(char) * size);
+		size = lens1 + n;
+	if (size == 0)
+		return (NULL);
+	ptr = malloc(sizeof(char) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
 
