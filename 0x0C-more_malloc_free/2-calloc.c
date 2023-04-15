@@ -4,7 +4,7 @@
  * *_calloc - allocate memory using malloc
  * @nmemb: number of elements
  * @size: the size of each element
- * Return: a pointer of allocated memory or 
+ * Return: a pointer of allocated memory or
  * NULL if @nmemb or size is 0
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
