@@ -1,17 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *malloc_checked - allocate memory using malloc
- * @b: unsigned integer
- * Return: a pointer of allocated memory or 98 if it fails.
+ * *_calloc - allocate memory using malloc
+ * @nmemb: number of elements
+ * @size: the size of each element
+ * Return: a pointer of allocated memory or 
+ * NULL if @nmemb or size is 0
  */
-void *malloc_checked(unsigned int b)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
 
-	*ptr = malloc(b);
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
-		exit (98);
-	else
-		return (ptr);
+		return (NULL);
+	return (ptr);
 }
