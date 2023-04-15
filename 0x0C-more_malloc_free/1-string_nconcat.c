@@ -14,10 +14,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 == NULL)
 		s1 = "";
-	lens1 = strlen(s1);
+	while (s1[lens1])
+		lens1++;
 	if (s2 == NULL)
 		s2 = "";
-	lens2 = strlen(s2);
+	while (s2[lens2])
+		lens2++;
 	if (lens2 <= n)
 		size = lens1 + lens2;
 	else
