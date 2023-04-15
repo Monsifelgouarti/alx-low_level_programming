@@ -22,6 +22,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		lens2++;
 	if (lens2 <= n)
 		size = lens2;
+	else
+		size = n;
 
 	if (size == 0)
 		return (NULL);
