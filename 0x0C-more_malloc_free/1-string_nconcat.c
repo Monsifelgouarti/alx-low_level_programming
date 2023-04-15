@@ -20,13 +20,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	while (s2[lens2])
 		lens2++;
-	if (lens2 <= n)
+	if (lens2 >= n)
 		size = lens2;
 	else
 		size = n;
 
-	if (size == 0)
-		return (NULL);
 	ptr = malloc(sizeof(char) * (lens1 + size + 1));
 	if (ptr == NULL)
 		return (NULL);
