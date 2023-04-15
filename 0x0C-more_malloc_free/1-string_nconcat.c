@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < lens1; i++)
 		ptr[i] = s1[i];
 	
-	for (i = 0; i < size; i++)
+	for (i = 0; i < lens2; i++)
 		ptr[lens1 + i] = s2[i];
 	ptr[i] = '\0';
 	return (ptr);
