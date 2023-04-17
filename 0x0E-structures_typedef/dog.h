@@ -5,9 +5,9 @@
  * @awner: owner of the dog.
  * Description: a type defining information about a dog.
  */
-typedef struct
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-}dog;
+};
