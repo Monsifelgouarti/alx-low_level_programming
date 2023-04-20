@@ -2,10 +2,10 @@
 #include <stdarg.h>
 /**
  * print_all - prints anything
- * @format:a list of types of arguments passed to the function 
+ * @format:a list of types of arguments passed to the function
  * * Return: nothing
  */
-void print_all(const char * format, ...)
+void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i = 0, j;
@@ -14,10 +14,10 @@ void print_all(const char * format, ...)
 	va_start(ap, format);
 	while (format[i])
 	{
-		j =0;
+		j = 0;
 		switch (format[i])
 		{
-			case 's' :
+			case 's':
 				str = va_arg(ap, char*);
 				if (str == NULL)
 				{
@@ -26,20 +26,20 @@ void print_all(const char * format, ...)
 				}
 				printf("%s", str);
 				break;
-			case 'i' :
+			case 'i':
 				printf("%d", va_arg(ap, int));
 				break;
-			case 'f' :
+			case 'f':
 				printf("%f", va_arg(ap, double));
 				break;
-			case 'c' :
+			case 'c':
 				printf("%c", va_arg(ap, int));
 				break;
-			default :
+			default:
 				j = 1;
 				break;
 		}
-		i++;	
+		i++;
 		if (format[i] != '\0' && j == 0)
 			printf(", ");
 		}
