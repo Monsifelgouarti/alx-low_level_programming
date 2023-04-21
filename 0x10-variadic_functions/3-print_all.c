@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	int i = 0, j, len = 0;
 	char *str;
 
-	while (format[len] != '\0' && format)
+	while (format[len] != '\0' && format != NULL)
 		len++;
 	va_start(ap, format);
 	while (i < len && format != NULL)
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		i++;
-		if (format[i] != '\0' && j == 0)
+		if (format[i] != '\0' && j == 0 && i < len)
 			printf(", ");
 		}
 		printf("\n");
