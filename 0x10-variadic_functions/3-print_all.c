@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include <stdarg.h>
-#include <stddef.h>
 /**
  * print_all - prints anything
  * @format:a list of types of arguments passed to the function
@@ -43,8 +41,7 @@ void print_all(const char * const format, ...)
 		while (format[i] != '\0' && j == 0)
 		{
 			printf(", ");
-			j = 1;
-		}
+			j = 1; }
 		}
 		va_end(ap);
 	}
