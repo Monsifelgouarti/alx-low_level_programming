@@ -8,6 +8,9 @@
  */
 int main(int argc, char *argv[])
 {
+	unsigned char *ma;
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -19,5 +22,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
+	ma = (char *)main;
+	while (i < atoi(argv[1]))
+	{
+		printf("%02x", ma[i]);
+		i++;
+	}
+	printf("\n");
 	return (0);
 }
