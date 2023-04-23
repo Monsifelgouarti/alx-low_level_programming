@@ -8,8 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned char *ma;
-	int i;
+	unsigned char opc;
+	int i, (*fun_ptr)(int, char **) = main;
 
 	if (argc != 2)
 	{
@@ -22,11 +22,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	ma = (char *)main;
+	
 	while (i < atoi(argv[1]))
 	{
-		printf("%02x", ma[i]);
+		opc = *(unsigned char *) fun_ptr;
+		printf("%02x", opc);
 		i++;
+		printf(" ");
+		fun_ptr++;
 	}
 	printf("\n");
 	return (0);
