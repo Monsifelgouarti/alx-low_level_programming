@@ -7,32 +7,19 @@
 size_t print_list(const list_t *h)
 {
 	size_t len = 0;
-	unsigned int i;
 	const list_t *ptr;
-	char nil[] = "(nil)";
 
 	ptr = h;
 	while (ptr->next)
 	{
 		if (ptr->str != NULL)
 		{
-			_putchar('[');
-			_putchar(len + '0');
-			_putchar(']');
-			_putchar(' ');
-			for (i = 0; i < ptr->len; i++)
-				_putchar(ptr->str[i]);
+			printf("[%d] ", len);
+			printf("%s", ptr->str);
 		}
 		else
-		{
-			_putchar('[');
-			_putchar(0 + '0');
-			_putchar(']');
-			_putchar(' ');
-			for (i = 0; i < 5; i++)
-				_putchar(nil[i]);
-		}
-		_putchar('\n');
+			printf("[0] (nil)");
+		printf("\n");
 		len++;
 		ptr = ptr->next;
 	}
