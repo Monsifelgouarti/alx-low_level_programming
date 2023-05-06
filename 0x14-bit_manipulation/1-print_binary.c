@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stddef.h>
 /**
  * print_binary - prints the binary representation of a number
@@ -8,5 +9,5 @@ void print_binary(unsigned long int n)
 {
 	if (n > 1)
 		print_binary(n >> 1);
-	printf("%d", n & 1);
+	printf("%ld", n & 1);
 }
