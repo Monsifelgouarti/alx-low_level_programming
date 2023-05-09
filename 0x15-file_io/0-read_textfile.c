@@ -22,8 +22,8 @@ size_t read_textfile(const char *filename, size_t letters)
 	*c = getc(fp);
 	while (lp < letters || *c != EOF)
 	{
-		*c = getc(fp);
 		write(STDOUT_FILENO, c, 1);
+		*c = getc(fp);
 		lp++;
 	}
 	fclose(fp);
