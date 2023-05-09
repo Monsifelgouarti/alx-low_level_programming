@@ -31,7 +31,7 @@ size_t read_textfile(const char *filename, size_t letters)
 		lp++;
 	}
 	fclose(fp);
-	if (lp >= letters)
+	if (lp > letters)
 		return (0);
 	return (lp);
 }
