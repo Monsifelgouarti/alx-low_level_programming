@@ -19,7 +19,8 @@ size_t read_textfile(const char *filename, size_t letters)
 	if (!fp)
 		return (0);
 	c = malloc(sizeof(char));
-	while (lp < letters)
+	*c = getc(fp);
+	while (lp < letters && *c != EOF)
 	{
 		*c = getc(fp);
 		write(STDOUT_FILENO, c, 1);
