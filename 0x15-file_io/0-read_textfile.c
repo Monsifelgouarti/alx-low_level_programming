@@ -12,11 +12,15 @@ size_t read_textfile(const char *filename, size_t letters)
 	FILE *fp;
 	size_t lp = 0;
 	char *c;
+	int r;
 
 	if (filename == NULL)
 		return (0);
 	fp = fopen(filename, "r");
 	if (!fp)
+		return (0);
+	r = access(filename, R_OK);
+	if (r != 0)
 		return (0);
 	c = malloc(sizeof(char));
 	*c = getc(fp);
