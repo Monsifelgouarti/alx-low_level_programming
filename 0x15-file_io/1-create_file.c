@@ -2,15 +2,14 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * create_file - reads a text file and prints it to the POSIX standard output
+ * create_file - creates a file.
  * @filename: the name of file to create.
- * @text_content: content to write to the file 
+ * @text_content: content to write to the file
  * Return: 1 if it success -1 on failure
  */
 int create_file(const char *filename, char *text_content)
 {
 	FILE *fp;
-	size_t lp = 0;
 	int i = 0;
 
 	if (filename == NULL)
