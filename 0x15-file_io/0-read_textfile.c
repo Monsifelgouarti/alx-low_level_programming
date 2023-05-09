@@ -20,7 +20,7 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	c = malloc(sizeof(char));
 	*c = getc(fp);
-	while (lp < letters && *c != EOF)
+	while (lp < letters || *c != EOF)
 	{
 		*c = getc(fp);
 		write(STDOUT_FILENO, c, 1);
