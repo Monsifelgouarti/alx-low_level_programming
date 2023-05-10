@@ -25,14 +25,14 @@ int main(int ac, char **av)
 	ft = fopen(av[2], "w+");
 	if (fdt < 0 || access(av[2], W_OK) != 0 || !ft)
 	{
-		fprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	if (access(av[1], F_OK) == 0)
 		ff = fopen(av[1], "r");
 	if (access(av[1], F_OK) != 0 || access(av[1], R_OK) != 0 || !ff)
 	{
-		fprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	while (fgets(buff, 1024, ff))
@@ -41,7 +41,7 @@ int main(int ac, char **av)
 	fclose(ft);
 	if (close(fdt) == -1)
 	{
-		fprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdf);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdt);
 		exit(100);
 	}
 	return (1);
