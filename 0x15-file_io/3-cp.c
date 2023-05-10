@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <sys/stat.h>
 /**
  * main - copies the content of a file to another file
  * @ac: number of args.
@@ -9,24 +11,38 @@
  */
 int main(int ac, char **av)
 {
-	FILE *fp;
-	size_t lp = 0;
-	int i = 0;
+	FILE *ff, *ft;
+	int fdt = 0;
+	char buff[1024];
 
-	if (ac != 3)
+	if (ac != 3 || av[1] == NULL || av[2] == NULL)
 	{
 		write(STDERR_FILENO, "Usage: cp file_from file_to", 28);
 		exit(97);
 	}
-	fp = fopen(av[1], "r");
-	if (!fp)
-		return (0);
-	i = access(av[1], W_OK);
-	if (i != 0)
+	if (access(av[2], F_OK) != 0)
+		fdt = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	ft = fopen(av[2], "w+");
+	if (fdt < 0 || access(av[2], W_OK) != 0 || !ft)
 	{
-		fclose(fp);
-		return (-1);
+		fprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
 	}
-	fclose(fp);
-	return (lp);
+	if (access(av[1], F_OK) == 0)
+		ff = fopen(av[1], "r");
+	if (access(av[1], F_OK) != 0 || access(av[1], R_OK) != 0 || !ff)
+	{
+		fprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
+	}
+	while (fgets(buff, 1024, ff))
+		fputs(buff, ft);
+	fclose(ff);
+	fclose(ft);
+	if (close(fdt) == -1)
+	{
+		fprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdf);
+		exit(100);
+	}
+	return (1);
 }
