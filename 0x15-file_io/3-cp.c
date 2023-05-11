@@ -17,7 +17,7 @@ int main(int ac, char **av)
 
 	if (ac != 3 || av[1] == NULL || av[2] == NULL)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to", 28);
+		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
 	if (access(av[2], F_OK) != 0)
@@ -26,6 +26,8 @@ int main(int ac, char **av)
 	if (fdt < 0 || access(av[2], W_OK) != 0 || !ft)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		fclose(ft);
+		close(fdt);
 		exit(99);
 	}
 	if (access(av[1], F_OK) == 0)
