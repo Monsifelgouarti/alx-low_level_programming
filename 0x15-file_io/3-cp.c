@@ -3,16 +3,32 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/stat.h>
+void closefile(int fd);
+
 /**
- * main - copies the content of a file to another file
+ * closefile - close a file descriptor
+ * @fd: id of a file descriptor to be closed.
+ * Return: nothing.
+ */
+void closefile(int fd)
+{
+	int val;
+
+	val = close(fd);
+	if (val == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+/** main - copies the content of a file to another file
  * @ac: number of args.
  * @av: list of args.
  * Return: 1 on success and -1 if it fails.
  */
 int main(int ac, char **av)
 {
-	FILE *ff, *ft;
-	int fdt = 0;
+	int fdf, fdt, wr, re;
 	char buff[1024];
 
 	if (ac != 3)
@@ -20,31 +36,33 @@ int main(int ac, char **av)
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
-/**	if (access(av[2], F_OK) != 0)*/
+	fdf = open(av[1], O_RDONLY);
 	fdt = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	ft = fopen(av[2], "w+");
-	if (fdt < 0 || access(av[2], W_OK) != 0 || !ft)
+	if (fdt == -1 || access(av[2], W_OK) != 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		fclose(ft);
-		close(fdt);
+		closefile(fdt);
+		closefile(fdf);
 		exit(99);
 	}
-	if (access(av[1], F_OK) == 0)
-		ff = fopen(av[1], "r");
-	if (access(av[1], F_OK) != 0 || access(av[1], R_OK) != 0 || !ff)
+	if (access(av[1], F_OK) != 0 || access(av[1], R_OK) != 0 || fdf == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	while (fgets(buff, 1024, ff))
-		fputs(buff, ft);
-	fclose(ff);
-	fclose(ft);
-	if (close(fdt) == -1)
+	re = read(fdf, buff, 1024);
+	while (re > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdt);
-		exit(100);
+		wr = write(fdt, buff, re);
+		if (fdt == -1 || wr == -1)
+		{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
+		re = read(fdf, buff, 1024);
+		fdt = open(av[2], O_WRONLY | O_APPEND);
 	}
+	closefile(fdf);
+	closefile(fdt);
 	return (1);
 }
