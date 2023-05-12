@@ -54,14 +54,19 @@ int main(int ac, char **av)
 	}
 	while (re > 0)
 	{
-		wr = write(fdt, buff, re);
-		if (fdt == -1 || wr == -1)
-		{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			exit(99);
-		}
-		re = read(fdf, buff, 1024);
-		fdt = open(av[2], O_WRONLY | O_APPEND);
+	wr = write(fdt, buff, re);
+	if (fdt == -1 || wr == -1)
+	{
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
+	re = read(fdf, buff, 1024);
+	if (fdf == -1 || re == -1)
+	{
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+	exit(98);
+	}
+	fdt = open(av[2], O_WRONLY | O_APPEND);
 	}
 	closefile(fdf);
 	closefile(fdt);
