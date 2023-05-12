@@ -39,19 +39,19 @@ int main(int ac, char **av)
 	}
 	fdf = open(av[1], O_RDONLY);
 	fdt = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fdt == -1 || access(av[2], W_OK) != 0)
+	re = read(fdf, buff, 1024);
+	if (fdt == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		closefile(fdt);
 		closefile(fdf);
 		exit(99);
 	}
-	if (access(av[1], F_OK) != 0 || access(av[1], R_OK) != 0 || fdf == -1)
+	if (fdf == -1 || re == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	re = read(fdf, buff, 1024);
 	while (re > 0)
 	{
 		wr = write(fdt, buff, re);
