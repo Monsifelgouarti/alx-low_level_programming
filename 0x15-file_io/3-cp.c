@@ -43,8 +43,6 @@ int main(int ac, char **av)
 	if (fdt == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		closefile(fdt);
-		closefile(fdf);
 		exit(99);
 	}
 	if (fdf == -1 || re == -1)
