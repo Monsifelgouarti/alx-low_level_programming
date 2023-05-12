@@ -21,7 +21,8 @@ void closefile(int fd)
 		exit(100);
 	}
 }
-/** main - copies the content of a file to another file
+/**
+ * main - copies the content of a file to another file
  * @ac: number of args.
  * @av: list of args.
  * Return: 1 on success and -1 if it fails.
