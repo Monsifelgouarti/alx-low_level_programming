@@ -20,7 +20,7 @@ int main(int ac, char **av)
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
-//	if (access(av[2], F_OK) != 0)
+/**	if (access(av[2], F_OK) != 0)*/
 	fdt = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	ft = fopen(av[2], "w+");
 	if (fdt < 0 || access(av[2], W_OK) != 0 || !ft)
