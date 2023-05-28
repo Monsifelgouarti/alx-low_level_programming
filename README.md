@@ -1,1 +1,1 @@
-this repository contiens projects for low programming languages.
+this repository contains projects for low programming languages.
