@@ -7,12 +7,10 @@ int prime_number(int n, int y);
  */
 int is_prime_number(int n)
 {
-	if (n <= 0)
+	if (n <= 1)
 		return (0);
-	if (n == 1)
-		return (1);
 	else
-		return (prime_number(n, 1));
+		return (prime_number(n, 2));
 }
 /**
  * prime_number - test if @y divide @n.
@@ -24,7 +22,7 @@ int prime_number(int n, int y)
 {
 	if (y < n && (n % y) == 0)
 		return (0);
-	if (y == (n / 2) && (n % 2) == 0)
+	if (y >= (n / 2))
 		return (1);
 	else
 		return (prime_number(n, y + 1));
