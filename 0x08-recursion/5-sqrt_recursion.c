@@ -22,7 +22,7 @@ int _sqrt_recursion(int n)
  */
 int sqrt_root(int n, int y)
 {
-	if (y >= n)
+	if (y >= n && y > 1)
 		return (-1);
 	if (n == (y * y))
 		return (y);
