@@ -1,4 +1,5 @@
 #include <stdio.h>
+int sqrt_root(int n, int y);
 /**
  * _sqrt_recursion -  the natural sqrt root of a number.
  * @n: a number
