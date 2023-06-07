@@ -13,7 +13,7 @@ int is_palindrome(char *s)
 		return (palindrome(s, 1));
 }
 /**
- * prime_number - test if the char inthe begining equal the char at the end.
+ * palindrome - test if the char inthe begining equal the char at the end.
  * @s: a string
  * @y: a number
  * Return: 0 if not match 1 if all chars match.
