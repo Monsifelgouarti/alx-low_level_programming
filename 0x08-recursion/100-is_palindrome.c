@@ -1,4 +1,4 @@
-#include "main.h"
+#include "string.h"
 int palindrome(char *s, int y);
 /**
  * is_palindrome - reurn 1 if the string is a palindrome
@@ -20,7 +20,7 @@ int is_palindrome(char *s)
  */
 int palindrome(char *s, int y)
 {
-	int i = _strlen_recursion(s);
+	int i = strlen(s);
 
 	if (*(s + y) == '\0')
 		return (1);
