@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _puts_recurtion - prints a string
+ * _puts_recursion - prints a string
  * @s: a string to print
  * Return: nothing
  */
@@ -12,4 +12,5 @@ void _puts_recursion(char *s)
 		s++;
 		_puts_recursion(s);
 	}
+	pytchar('\n');
 }
