@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 int palindrome(char *s, int y);
 /**
  * is_palindrome - reurn 1 if the string is a palindrome
@@ -7,7 +7,7 @@ int palindrome(char *s, int y);
  */
 int is_palindrome(char *s)
 {
-	if (s == "")
+	if (*s == '\0')
 		return (1);
 	else
 		return (palindrome(s, 1));
