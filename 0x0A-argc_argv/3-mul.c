@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - multiplies two numbers
  * @argv: array of arguments
@@ -11,7 +12,7 @@ int main(int argc, char *argv[])
 
 	if (argc >= 3)
 	{
-		i = a toi(argv([1]) * atoi(argv[2]);
+		i = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", i);
 		return (0);
 	}
