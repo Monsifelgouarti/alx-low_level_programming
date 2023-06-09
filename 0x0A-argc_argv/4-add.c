@@ -19,17 +19,16 @@ int main(int argc, char *argv[])
 			j = 0;
 			while (argv[i][j])
 			{
-				if (argv[i][j] < '0' || argv[i][j] > '9')
-				{
-					printf("Error\n");
-					return (1);
-				}
-				j++;
-				sum += atoi(argv[i]);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
 			}
-			printf("%d\n", sum);
-		}
+			j++;
+			}
+			sum += atoi(argv[i]);
+			}
+		printf("%d\n", sum);
 	}
-
 	return (0);
 }
