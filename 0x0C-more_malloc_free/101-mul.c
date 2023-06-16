@@ -35,7 +35,7 @@ int _isdigit(char *s)
 {
 	while (*s != '\0')
 	{
-		if (*s < 48 || c > 57)
+		if (*s < 48 || *s > 57)
 			return (0);
 		s++;
 	}
